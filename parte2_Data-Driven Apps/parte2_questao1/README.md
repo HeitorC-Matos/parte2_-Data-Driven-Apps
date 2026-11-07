@@ -8,11 +8,10 @@ Criar uma API que recebe uma pergunta e devolve uma resposta simulada com o Lang
 
 - `main.py`: aplicação FastAPI e respostas do chatbot.
 - `requirements.txt`: bibliotecas necessárias.
-- `arquitetura.png`: imagem do diagrama da aplicação.
 
 ## Preparação no VS Code (Windows)
 
-1. Extraia o ZIP em uma pasta própria e abra essa pasta pelo menu **Arquivo > Abrir Pasta** do VS Code.
+1. Abra essa pasta pelo menu **Arquivo > Abrir Pasta** do VS Code.
 2. Abra **Terminal > Novo Terminal**.
 3. Digite `dir` para verificar se `main.py` e `requirements.txt` estão nessa mesma pasta.
 4. Crie o ambiente virtual:
