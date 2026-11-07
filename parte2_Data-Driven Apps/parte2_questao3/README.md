@@ -20,14 +20,11 @@ parte2_questao3_tradutor_huggingface/
 ├── main.py
 ├── requirements.txt
 ├── README.md
-├── arquitetura.png
-├── arquitetura.dot
-└── .gitignore
 ```
 
 ## Como executar no VS Code (Windows)
 
-1. Extraia o ZIP e abra a pasta que contém `main.py` e `requirements.txt` no VS Code.
+1. Abra a pasta que contém `main.py` e `requirements.txt` no VS Code.
 2. Abra **Terminal > Novo Terminal** e execute `dir` para verificar os arquivos.
 3. Crie um ambiente virtual na pasta do projeto:
 
@@ -82,17 +79,12 @@ A API recebe o texto, separa entradas maiores em trechos de até 300 tokens (peq
 
 **Por que usar LangChain?** Ele oferece uma forma padronizada de chamar modelos. Neste projeto, `HuggingFacePipeline` liga o LangChain ao tradutor da Hugging Face.
 
-## Diagrama
-
-O diagrama do projeto está em `arquitetura.png`. O arquivo `arquitetura.dot` contém sua estrutura editável.
-
 ## Atenção
 
 - Na primeira execução, o modelo será baixado da Hugging Face. É necessária conexão à internet.
 - O download e a primeira inicialização podem demorar. A tradução posterior ocorre localmente.
 - O pacote `transformers` foi limitado à versão **4**, pois o pipeline `translation` não é suportado na versão **5**.
-- Se `py -m venv .venv` utilizar uma versão do Python incompatível com alguma biblioteca, use Python 3.12 e recrie o ambiente virtual.
-- Não reutilize a `.venv` de outra questão. Execute os comandos com `./.venv/Scripts/python.exe` (Windows PowerShell: `.\.venv\Scripts\python.exe`).
+- Se `py -m venv .venv` utilizar uma versão do Python incompatível com alguma biblioteca, use Python 3.14 e recrie o ambiente virtual.
 - Para encerrar o servidor, pressione `Ctrl + C` no terminal.
 
 ## Referências
