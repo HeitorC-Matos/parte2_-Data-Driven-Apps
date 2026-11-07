@@ -16,9 +16,6 @@ parte2_questao2_tradutor_openai/
 ├── main.py
 ├── requirements.txt
 ├── .env.example
-├── .gitignore
-├── arquitetura.png
-├── arquitetura.mmd
 └── README.md
 ```
 
