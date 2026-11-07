@@ -23,14 +23,14 @@ A pasta `.venv` e o arquivo `.env` serão criados no computador e não devem ser
 
 ## Pré-requisitos
 
-- Python 3.11 ou 3.12 instalado.
+- Python instalado.
 - VS Code.
 - Acesso à internet.
 - Uma chave da API da OpenAI com uso disponível (a API pode ter cobrança).
 
 ## Como executar no VS Code (Windows / PowerShell)
 
-1. Extraia o ZIP e abra **esta pasta** no VS Code: **Arquivo > Abrir Pasta**.
+1. Abra **esta pasta** no VS Code: **Arquivo > Abrir Pasta**.
 2. Abra **Terminal > Novo Terminal**. Execute `dir` e confira se `main.py` e `requirements.txt` aparecem.
 3. Crie o ambiente virtual:
 
@@ -80,14 +80,6 @@ A resposta pode apresentar pequenas diferenças. Se tudo funcionar, o código HT
 
 Para encerrar o servidor, pressione `Ctrl + C` no terminal.
 
-## Diagrama da arquitetura
-
-![Arquitetura da aplicação](arquitetura.png)
-
-O arquivo `arquitetura.mmd` contém o diagrama em formato Mermaid, para facilitar alterações.
-
-Fluxo: **Usuário → FastAPI → LangChain → OpenAI → LangChain → FastAPI → Usuário**.
-
 ## Por que usar LangChain?
 
 O LangChain ajuda a organizar a mensagem enviada ao modelo e a resposta recebida. Neste projeto, ele usa `ChatOpenAI` para chamar a API da OpenAI. Assim, o FastAPI fica responsável pela entrada e saída HTTP, enquanto o LangChain cuida da comunicação com o modelo.
@@ -99,5 +91,3 @@ O LangChain ajuda a organizar a mensagem enviada ao modelo e a resposta recebida
 - **422:** o texto está vazio ou o JSON não tem o campo `texto` corretamente preenchido.
 - **Endereço em uso:** encerre outras aplicações do Uvicorn com `Ctrl + C`.
 - **Erro de pasta ou `.venv`:** execute `dir` na pasta que contém `main.py` e `requirements.txt`, e recrie `.venv` nessa pasta se necessário.
-
-A assinatura do ChatGPT e o uso da API da OpenAI são serviços com faturamentos separados. Consulte https://platform.openai.com/ para verificar seu acesso à API.
