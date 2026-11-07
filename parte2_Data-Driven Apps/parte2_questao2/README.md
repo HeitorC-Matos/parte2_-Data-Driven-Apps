@@ -12,7 +12,7 @@ Esta aplicação recebe um texto em inglês e retorna uma tradução para o fran
 ## Estrutura do projeto
 
 ```text
-parte2_questao2_tradutor_openai/
+parte2_questao2/
 ├── main.py
 ├── requirements.txt
 ├── .env.example
